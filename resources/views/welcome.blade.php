@@ -3,14 +3,16 @@
 
 
 <div class="container py-5">
-    <div class="row">
+    <div class="row gy-3 justify-content-center">
         @forelse ($movies as $movie)
-        <div class="col-5 py-3">
-            <h1>{{$movie->title}}</h1>
-            <h3>Titolo originale: {{$movie->original_title}}</h3>
-            <p>Data d'uscita: {{$movie->date}}</p>
-            <p>Voto: {{$movie->vote}}</p>
-            <span>Nazionalita': {{$movie-> nationality}}</span>
+        <div class="card col-5 m-3 text-bg-primary">
+            <div class="card-body">
+                <h5 class="card-title">{{$movie->title}}</h5>
+                <h5 class="card-title">{{$movie->original_title}}</h5>
+                <p class="card-text">Voto: {{$movie->vote}}</p>
+                <p class="card-text">Nazionalita': {{$movie->nationality}}</p>
+                <p class="card-text"><small class="text-body-secondary">Data d'uscita: {{$movie->date}}</small></p>
+            </div>
         </div>
         @empty
 
