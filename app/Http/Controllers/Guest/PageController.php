@@ -16,4 +16,10 @@ class PageController extends Controller
         ];
         return view('welcome', $data);
     }
+    // public function homepage()
+    // {
+    //     $movies = Movie::where('vote', '>=', 9)->orderBy('id', 'asc')->get();
+    //     $data = ['movies' => $movies,];
+    //     return view('welcome', $data);
+    // }
 }
